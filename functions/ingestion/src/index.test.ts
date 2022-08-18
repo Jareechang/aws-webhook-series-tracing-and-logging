@@ -43,7 +43,7 @@ jest.mock('@app/config', () => ({
       }
     },
   }
-}))
+}));
 
 describe('lambda.handler', () => {
   afterEach(() => {

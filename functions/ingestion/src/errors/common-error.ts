@@ -1,6 +1,9 @@
-class CommonError extends Error {
+import { ServiceError } from '@app/types';
+
+class CommonError extends Error implements ServiceError {
   public operation: string = '';
   public context: Record<string, any> = {};
+  public message: string = '';
   constructor(message: string) {
     super(message);
     this.name = this.constructor.name;
